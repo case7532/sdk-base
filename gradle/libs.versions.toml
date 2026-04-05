@@ -1,0 +1,44 @@
+[versions]
+agp = "9.1.0"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+loggingInterceptor = "5.3.2"
+material = "1.10.0"
+koin = "4.2.+"
+retrofit = "2.9.+"
+retrofit_converter_kotlinx = "2.12.+"
+jetbrains_kotlinx_serialization = "1.10.0"
+jetbrains-serialization = "2.3.0"
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+#Koin
+koin-bom                    = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
+koin-android                = { module = "io.insert-koin:koin-android" }
+koin-androidx-workmanager   = { module = "io.insert-koin:koin-androidx-workmanager" }
+koin-androidx-navigation    = { module = "io.insert-koin:koin-androidx-navigation" }
+koin-androidx-startup       = { module = "io.insert-koin:koin-androidx-startup" }
+koin-androidx-compat        = { module = "io.insert-koin:koin-androidx-compat" }
+koin-compose                = { module = "io.insert-koin:koin-compose" }
+koin-compose-viewmodel      = { module = "io.insert-koin:koin-compose-viewmodel" }
+koin-compose-navigation     = { module = "io.insert-koin:koin-compose-navigation" } #Navigation 2 (Android only)
+koin-compose-navigation3    = { module = "io.insert-koin:koin-compose-navigation3" } #Navigation 3
+#Square-Retrofit
+square-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit"}
+#Square-OkHttp
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor"}
+#Square-Retrofit-Converters
+square-retrofit-kotlinx-serialization = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit_converter_kotlinx"}
+#Jetbrains-Kotlinx
+jetbrains-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "jetbrains_kotlinx_serialization" }
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-serialization = { id = "plugin.serialization", version.ref = "jetbrains-serialization"}
